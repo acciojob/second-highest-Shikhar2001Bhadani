@@ -10,6 +10,8 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			if(arr.length<2)
+				return -Infinity;
 			let second_largest = [...new Set(arr)].sort((a,b)=>b-a);
 			return(second_largest[1]);
 			
@@ -17,7 +19,7 @@
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+			//var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
